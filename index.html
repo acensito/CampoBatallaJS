@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Esto es un titulo</title>
-	<link rel="stylesheet" href="">
+	<meta charset="UTF-8">
+	<title>Ejercicio MiriadaX Modulo 3</title>
+	<style type="text/css">
+        html {
+            background-color: #e6e9e9;
+            -webkit-font-smoothing: antialiased !important;
+        }
+
+        body {
+            margin: 2em auto;
+            padding: 2em 2em 2em;
+            max-width: 800px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5em;
+            color: #545454;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+        
+        body {
+            text-align: center;
+        }
+
+	</style>
 </head>
 <body>
-	<span>Esto es una prueba</span>
+    <h1 id="h1"></h1>
+    <h2>Felipe Rodriguez</h2>
+    <h2 id="h2">La fecha y la hora son:</h2>
+    <div id="fecha"></div>
+    <div id="ejercicio">
+        
+
+    </div>
+
+    <script type="text/javascript">
+        var fecha = new Date();
+        var msj;
+
+        if      (fecha.getHours() < 7)  { msj = "Buenas noches";}
+        else if (fecha.getHours() < 12) { msj = "Buenos días";}
+        else if (fecha.getHours() < 21) { msj = "Buenas tardes";}
+        else                                          { msj = "Buenas noches";}
+
+        document.getElementById("h1").innerHTML    = msj;
+        document.getElementById("fecha").innerHTML = fecha;
+
+        var referencia = location.href;
+        var referencia2 = location;
+        document.getElementById("ejercicio").innerHTML = "<p>" + referencia + "</p><p>" + referencia2 + "</p>";
+    </script>
 </body>
 </html>
